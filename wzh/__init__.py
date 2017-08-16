@@ -1,5 +1,9 @@
 from flask import Flask
-from .blog import blog
+
+try:
+	from .blog import blog
+except:
+	from blog import blog
 
 
 app = Flask(__name__)

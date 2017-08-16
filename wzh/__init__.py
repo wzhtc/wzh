@@ -1,5 +1,5 @@
 from flask import Flask
-from blog import blog
+from .blog import blog
 
 
 app = Flask(__name__)

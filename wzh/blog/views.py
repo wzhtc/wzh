@@ -1,9 +1,13 @@
-from flask import request, render_template
+from flask import request, render_template, redirect, url_for
 from . import blog
 
 @blog.route('/')
+def home():
+    return redirect(url_for('.index'))
+
+@blog.route('/index')
 def index():
-    return render_template('index.html')
+	return render_template('index.html')
 
 
 @blog.route('/post')

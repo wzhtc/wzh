@@ -16,10 +16,10 @@ def index():
 	return render_template('index.html', **locals())
 
 
-@blog.route("/post/<fileid>")
-def post(fileid):
-    print(fileid)
-    page = download_file_from_google_drive(fileid)
+@blog.route("/post/<pid>")
+def post(pid):
+    post = Post.objects(id=pid).first()
+    page = download_file_from_google_drive(post.fileid)
     page = Markup(markdown.markdown(page))
     return render_template('post.html', **locals())
 

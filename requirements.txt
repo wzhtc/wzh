@@ -1,0 +1,8 @@
+Flask
+Flask-Login>=0.3.0
+Flask-Admin
+Flask-SQLAlchemy
+flask-mongoengine
+wtforms
+flask-wtf
+markdown

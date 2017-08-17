@@ -1,4 +1,5 @@
 from flask import Blueprint
+from flask_mongoengine import MongoEngine
 
 blog = Blueprint(
     'blog',

@@ -18,10 +18,9 @@ def index():
 
 @blog.route("/post/<fileid>")
 def post(fileid):
-    print('=' * 60)
     print(fileid)
-    post = download_file_from_google_drive(fileid)
-    post = Markup(markdown.markdown(post))
+    page = download_file_from_google_drive(fileid)
+    page = Markup(markdown.markdown(page))
     return render_template('post.html', **locals())
 
 
